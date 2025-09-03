@@ -1,0 +1,46 @@
+{
+  "name": "{Name of library without space and in lowercase only.}",
+  "version": "1.0.0",
+  "description": "{Description Of library}",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/index.css",
+
+  "files": ["dist"],
+
+  "scripts": {
+    "build:js": "tsup src/index.ts --format cjs,esm --dts",
+    "build:css": "npx @tailwindcss/cli -i ./src/index.css -o ./dist/index.css --content './src/**/*.{ts,tsx,js,jsx}'",
+    "build": "npm run build:js && npm run build:css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "keywords": ["{Keyword1}", "{Keyword2}"],
+  "author": "{Your Name}",
+  "license": "MIT",
+
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17",
+    "tailwindcss": ">=3"
+  },
+
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "tsup": "^8.5.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@tailwindcss/cli": "^4.1.12"
+  },
+
+ "exports": {
+  ".": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "./package.json": "./package.json",
+  "./dist/*": "./dist/*"
+}
+}
+
