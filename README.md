@@ -1,10 +1,10 @@
-Component Library Template
+## Component Library Template
 
 A fast starter template for building your own React + Tailwind UI library. Clone, customize, build, and publish—no boilerplate fatigue, no config chaos.
 
 ---
 
-##  Quick Start
+# Quick Start
 
 ```bash
 git clone https://github.com/ClonicalClone/Component-Library-Template.git
@@ -105,7 +105,7 @@ import 'yourlibraryname/dist/index.css';
   className="custom-class"
 />
 ```
-#Default Setup
+# Default Setup
 
 Includes a basic Button component with Tailwind styling. Extend by adding components to src/, and export them via src/index.ts.
 
